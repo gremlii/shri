@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Анкета Школы разработки интерфейсов</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" media="print" href="print.css">
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <!--[if (gte IE 6)&(lte IE 8)]> 
+                <script src="selectivizr.js"></script>
+        <![endif]-->
+</head>
+<body>
+
+  <ul class="shriform">
+    <li id="photo">
+      <img src="http://img-fotki.yandex.ru/get/33/13773251.79/0_74dd8_df9c4880_S" width="200" height="220" alt="My best photo ^.^">
+    </li>
+    <li id="fio">
+      <i>ФИО:</i> Вася Пупкин<br>
+      <i>Год рождения:</i> 124 BC<br>
+      <i>Е-mail:</i> <a href="mailto:e-mail@mail.ru">e-mail</a><br>
+      <i>Телефон:</i> +76543210<br>
+      <i>Город:</i> Нижний Урюпинск<br>
+      <i>Вуз, факультет, специальность, кафедра:</i> НУГУ<br>
+      <i>Год окончания вуза:</i> 1701<br>
+      <i>Уровне владения английским языком:</i> 80й
+    </li>
+
+    <li tabindex="1">
+      <span class="title">Опыт разработки</span>
+      <div class="content">
+        <i>Расскажите нам о вашем опыте разработки. Ничего не упускайте: это может быть как серьезный интерфейс, так и просто домашняя страничка.</i>
+        <p>Разрабатывал клиент-серверныее приложения основанные на TCP, UDP протоколах. Приложения с CLI и GUI, занимался версткой/редактированием сайтов, основанных как на статичном HTML-е, так и на CMS, perl. Разрабатывал и поддерживал фреймворки на python-е.</p>
+      </div>
+    </li>
+    <li tabindex="1">
+      <span class="title">Языки программирования, фреймворки и технологии</span>
+      <div class="content">
+        <i>Какие языки программирования, фреймворки и технологии вы использовали? Сложились ли у вас личные предпочтения?</i>
+          <p>Языки с которыми я бы охотно стал работать: C, python, html, sql<br>Доводилось иметь дело и с такими: bash, perl, java, delphi, pascal, basic<br>Из подходящих технологий - nginx, apache, различные http-демоны.</p>
+      </div>
+    </li>
+    <li tabindex="1">
+      <span class="title">Редакторы и среды разработки</span>
+      <div class="content">
+        <i>Какие редакторы и среды разработки вы использовали? Чем обычно пользуетесь?</i>
+        <p>Пробовал различные редакторы (как встроенными в среду разработкитак и самостоятельными). На данный момент пользуюсь vim-ом)</p>
+      </div>
+    </li>
+    <li tabindex="1">
+      <span class="title">Операционные системы</span>
+      <div class="content">
+        <i>С какими ОС приходилось сталкиваться? Для каких целей вы их использовали?</i>
+        <p>Если говорить о "домашней" OS, то начиналось все а dos-а, далее windows, где-то после xp перешел на linux. Больше года работал у хостинг-провайдера, где были и windows, и unix сервера различных версий. Занимался консультацией и решением проблем пользователей.</p>
+      </div>
+    </li>
+    <li tabindex="1">
+      <span class="title">Системы контроля версий</span>
+      <div class="content">
+        <i>Приходилось ли вам пользоваться системами контроля версий? Если да, то какими? Какая из них вам нравится больше всего?</i>
+        <p>Сейчас активно используб svn(subversion), остальные на уровне check-in. Для выполнения задания пришлось научиться пользоваться гитом.</p>
+      </div>
+    </li>
+    <li tabindex="1">
+      <span class="title">Системы постановки и ведения задач</span>
+      <div class="content">
+        <i>Использовали ли вы системы постановки и ведения задач?</i>
+        <p>Да, приходилось работать с такими системами, как jira и otrs.</p>
+      </div>
+    </li>
+    <li tabindex="1"> 
+      <span class="title">Полезные для фронтенд-разработчика ресурсы</span>
+      <div class="content">
+        <i>Какие полезные для фронтенд-разработчика ресурсы вы используете и можете посоветовать?</i>
+        <p>Пожалуй, самые полезные - это htmlbook.ru и поисковик)</p>
+      </div>
+    </li>
+    <li tabindex="1"> 
+      <span class="title">Опыт работы</span>
+      <div class="content">
+        <i>Работали ли вы где-нибудь? Какие у вас были должностные обязанности? Есть ли опыт работы в команде?</i>
+        <p>.masterhost - 1я, 2я линия техподдержки. Общение с клиентами (по телефону и через почту) и помощ в решение их проблем.<br>yandex - автоматическое тестирование медийной/контекстной рекламы.<br>В обоих случаях работал в команде.</p>
+      </div>
+    </li>
+  </ul>
+
+  
+	<script>
+	  (function(){
+	  
+		// Append a close trigger for each block
+		$('.shriform .content').append('<span class="close">x</span>');		
+		// Show window
+		function showContent(elem){
+			hideContent();
+			elem.find('.content').addClass('expanded');
+			elem.addClass('cover');	
+		}
+		// Reset all
+		function hideContent(){
+			$('.shriform .content').removeClass('expanded');
+			$('.shriform li').removeClass('cover');		
+		}
+		
+		// When a li is clicked, show its content window and position it above all
+		$('.shriform li').click(function() {
+			showContent($(this));
+		});		
+		// When tabbing, show its content window using ENTER key
+		$('.shriform li').keypress(function(e) {
+			if (e.keyCode == 13) { 
+				showContent($(this));
+			}
+		});
+
+		// When right upper close element is clicked  - reset all
+		$('.shriform .close').click(function(e) {
+			e.stopPropagation();
+			hideContent();
+		});		
+		// Also, when ESC key is pressed - reset all
+		$(document).keyup(function(e) {
+			if (e.keyCode == 27) { 
+			  hideContent();
+			}
+		});
+		
+	  })();
+	</script>
+</body>
+</html>

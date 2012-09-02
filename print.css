@@ -1,0 +1,74 @@
+
+body, ul, li, i{
+  color: black;
+  background: white;
+  height: 100%; width: 100%;
+}
+
+li, li:hover, li:active, li:visited {
+	text-decoration: none;
+	color: black;
+}
+
+.shriform{
+  width: 100%;
+  margin: 0; padding: 0;	  
+  list-style: none;
+  counter-reset: li;
+  color: black;
+  background: white;
+  float: none;
+  cursor: auto;
+  position: static;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+.shriform .content{
+  opacity: 1; display: inline;
+  overflow: visible;
+  font: 14px Arial, Helvetica;
+  position: static;
+  height: 100%; width: 100%;
+
+  float: none;
+  cursor: auto;
+  top: 0;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  margin: 0; padding: 0;
+}
+
+.shriform .title{
+  display: none;
+}
+
+.shriform li:nth-child(1){
+  display: none;
+}
+
+.shriform li{
+  float: none;
+  cursor: auto;
+  position: static;
+  top: 0;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  margin: 0;
+  padding: 10px 0;
+  opacity: 1;
+  height: 100%; width: 100%;
+}
