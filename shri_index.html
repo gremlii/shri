@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Анкета Школы разработки интерфейсов</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" media="print" href="print.css">
-        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <!--[if (gte IE 6)&(lte IE 8)]> 
-                <script src="selectivizr.js"></script>
-        <![endif]-->
+  <title>Анкета Школы разработки интерфейсов</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" media="print" href="print.css">
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+          <script src="selectivizr.js"></script>
+  <![endif]-->
 </head>
 <body>
-
   <ul class="shriform">
     <li id="photo">
       <img src="http://img-fotki.yandex.ru/get/33/13773251.79/0_74dd8_df9c4880_S" width="200" height="220" alt="My best photo ^.^">
@@ -69,14 +68,14 @@
         <p>Да, приходилось работать с такими системами, как jira и otrs.</p>
       </div>
     </li>
-    <li tabindex="1"> 
+    <li tabindex="1">
       <span class="title">Полезные для фронтенд-разработчика ресурсы</span>
       <div class="content">
         <i>Какие полезные для фронтенд-разработчика ресурсы вы используете и можете посоветовать?</i>
         <p>Пожалуй, самые полезные - это htmlbook.ru и поисковик)</p>
       </div>
     </li>
-    <li tabindex="1"> 
+    <li tabindex="1">
       <span class="title">Опыт работы</span>
       <div class="content">
         <i>Работали ли вы где-нибудь? Какие у вас были должностные обязанности? Есть ли опыт работы в команде?</i>
@@ -85,48 +84,39 @@
     </li>
   </ul>
 
-  
-	<script>
-	  (function(){
-	  
-		// Append a close trigger for each block
-		$('.shriform .content').append('<span class="close">x</span>');		
-		// Show window
-		function showContent(elem){
-			hideContent();
-			elem.find('.content').addClass('expanded');
-			elem.addClass('cover');	
-		}
-		// Reset all
-		function hideContent(){
-			$('.shriform .content').removeClass('expanded');
-			$('.shriform li').removeClass('cover');		
-		}
-		
-		// When a li is clicked, show its content window and position it above all
-		$('.shriform li').click(function() {
-			showContent($(this));
-		});		
-		// When tabbing, show its content window using ENTER key
-		$('.shriform li').keypress(function(e) {
-			if (e.keyCode == 13) { 
-				showContent($(this));
-			}
-		});
+  <script>
+      (function(){
+        $('.shriform .content').append('<span class="close">x</span>');
+        function showContent(elem){
+            hideContent();
+            elem.find('.content').addClass('expanded');
+            elem.addClass('cover');
+        }
+        function hideContent(){
+            $('.shriform .content').removeClass('expanded');
+            $('.shriform li').removeClass('cover');
+        }
 
-		// When right upper close element is clicked  - reset all
-		$('.shriform .close').click(function(e) {
-			e.stopPropagation();
-			hideContent();
-		});		
-		// Also, when ESC key is pressed - reset all
-		$(document).keyup(function(e) {
-			if (e.keyCode == 27) { 
-			  hideContent();
-			}
-		});
-		
-	  })();
-	</script>
+        $('.shriform li').click(function() {
+            showContent($(this));
+        });
+        $('.shriform li').keypress(function(e) {
+            if (e.keyCode == 13) {
+                showContent($(this));
+            }
+        });
+
+        $('.shriform .close').click(function(e) {
+            e.stopPropagation();
+            hideContent();
+        });
+        $(document).keyup(function(e) {
+            if (e.keyCode == 27) {
+              hideContent();
+            }
+        });
+
+        })();
+  </script>
 </body>
 </html>
